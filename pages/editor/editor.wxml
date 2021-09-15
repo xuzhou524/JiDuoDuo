@@ -1,0 +1,32 @@
+<form bindsubmit="doSubmit" bindreset="doDelete">
+
+<view class="addItem">
+  <text class="addItemTitle">产品名称 :</text>
+  <input class="addItemValue" name="productName" type="text" placeholder="请输入名称" value='{{productName}}'></input>
+</view>
+
+<view class="addItem">
+  <text class="addItemTitle">记录时间 :</text>
+  <picker class="addDatePicker" mode="date" bindchange="bindDateChange">
+    <view class="productDate">{{addTime}}</view>
+  </picker>
+</view>
+
+<view class="addItem">
+  <text class="addItemTitle">数量（个）:</text>
+  <input class="addItemValue" name="productCount" type="number" placeholder="请输入数量" value='{{productCount}}'></input>
+</view>
+
+<view class="addItem">
+  <text class="addItemTitle">单价（分）:</text>
+  <input class="addItemValue" name="productUnitPrice" type="digit" placeholder="请输入单价，单位（分）" value='{{productUnitPrice}}'></input>
+</view>
+
+<view class="addItem">
+  <text class="addItemTitle">备注说明 :</text>
+  <input class="addItemValue" name="productNote" type="text" placeholder="请输入备注" value='{{productNote}}'></input>
+</view>
+
+<button class="submitButton" form-type="submit">保存</button>
+<button class="deleteButton" form-type="reset">删除</button>
+</form>

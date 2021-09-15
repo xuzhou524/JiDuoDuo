@@ -1,0 +1,133 @@
+page {
+  background-color: #F3F3F3;
+}
+
+.jiDuoDuoHome {
+  width: 690rpx;
+  height: 200rpx;
+  padding: 30rpx;
+  margin-bottom: 30rpx;
+}
+
+.homeHead {
+  display: flex;
+  flex-direction: column;
+  /* 继承父级高度 */
+  height: 100%;
+  /* 居中对齐 */
+  align-items: center;
+  padding: 30rpx 30rpx 20rpx 30rpx;
+  background: #FECD2F;
+  border-radius: 15rpx;
+}
+
+.title {
+  margin-top: 20rpx;
+  font-size: 26rpx;
+  color: white;
+
+}
+
+.totalAmount {
+  font-size: 52rpx;
+  color: white;
+  margin-top: 30rpx;
+}
+
+.addbutton {
+  position: fixed;
+  right: 30rpx;
+  bottom: 50rpx;
+  height: 100rpx;
+  width: 100rpx;
+  background-color: white;
+  /* text-align: center; */
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  border: none;
+}
+
+.addImage {
+  width: 100%;
+  height: 100%;
+}
+
+.runningWaterItem {
+  padding: 10rpx 0 10rpx;
+}
+
+.itemHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20rpx 30rpx 0rpx 30rpx;
+}
+
+.userItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30rpx;
+  background-color: white;
+  border-bottom: 1px solid #F3F3F3;
+  margin-top: 20rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  border-radius: 15rpx;
+}
+
+.itemHeadTitle {
+  font-size: 22rpx;
+  color: #666666;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+}
+
+.itemTitle {
+  font-size: 28rpx;
+  color: #333333;
+}
+
+.itemNote {
+  font-size: 22rpx;
+  color: #999999;
+  margin-top: 10rpx;
+}
+
+.boxItem {
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+.boxItem .del-button {
+  position: absolute;
+  right: -30rpx;
+  width: 140rpx;
+  height: 100%;
+  background-color: #df3448;
+  color: #fff;
+  top: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+  font-size: 24rpx;
+  margin-left: 30rpx;
+}
+
+.boxItem.active .item {
+  left: -140rpx;
+}
+
+.boxItem.active .del-button {
+  right: 0;
+}

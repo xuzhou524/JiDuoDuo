@@ -1,0 +1,30 @@
+<!--index.wxml-->
+<view class="jiDuoDuoHome">
+  <view class="homeHead">
+    <text class="title">本月总收入（元）</text>
+    <text class="totalAmount">{{flowProduction.totalAmount ? flowProduction.totalAmount : '0'}}</text>
+  </view>
+</view>
+
+<view class="addbutton" bindtap="addProduct">
+  <image class="addImage" src="/images/add.png"></image>
+</view>
+
+<view class="runningWaterItem" wx:for="{{flowProduction.productionList}}" wx:key='index' wx:for-item='product_list'>
+  <view class="itemHead">
+    <text class="itemHeadTitle">{{product_list.itemTime}}</text>
+    <text class="itemHeadTitle">共计 ¥{{product_list.itemAmount}}</text>
+  </view>
+
+  <view wx:for="{{product_list.itemList}}" wx:key="_id">
+    <view class="userItem" bindtap="goDetail" data-product="{{item}}">
+      <view class="item">
+        <text class="itemTitle">{{item.productName}}</text>
+        <text class="itemNote">{{item.productNote}}</text>
+      </view>
+      <text class="itemTitle">¥{{item.productTotalAmount}}</text>
+    </view>
+
+  </view>
+
+</view>

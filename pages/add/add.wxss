@@ -1,0 +1,38 @@
+.addItem {
+  display: flex;
+  align-items: center;
+  padding: 36rpx;
+  background-color: white;
+  border-bottom: 1px solid #F3F3F3;
+}
+
+.addItemTitle {
+  font-size: 32rpx;
+  color: #333333;
+  margin-right: 30rpx;
+}
+
+.addItemValue {
+  font-size: 32rpx;
+  color: #333333;
+}
+
+.addDatePicker {
+  font-size: 32rpx;
+  color: #FECD2F;
+}
+
+.submitButton {
+  width: 80%;
+  height: 86rpx;
+  background: #FECD2F;
+  text-align: center;
+  align-items: center;
+  margin-top: 100rpx;
+  font-size: 36rpx;
+  color:white;
+}
+.submitButton::after {
+  border: none;
+  background-origin: 0;
+}

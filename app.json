@@ -1,0 +1,34 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/user/user",
+    "pages/add/add",
+    "pages/editor/editor",
+    "pages/historyBill/historyBill"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f4c903",
+    "navigationBarTitleText": "今日计件",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#b6b6b6",
+    "selectedColor": "#f4c903",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home-h.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "images/user.png",
+        "selectedIconPath": "images/user-h.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

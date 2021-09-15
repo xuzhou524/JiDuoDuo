@@ -1,0 +1,4 @@
+<view class="userItem" wx:for="{{production}}" wx:key="index">
+  <text class="itemTitle">{{item.itemTime}}</text>
+  <view class="itemTitle">¥{{item.itemAmount}}</view>
+</view>
