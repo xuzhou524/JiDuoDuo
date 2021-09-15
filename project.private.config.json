@@ -23,6 +23,12 @@
           "pathName": "pages/add/add",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "pages/updateLog/updateLog",
+          "pathName": "pages/updateLog/updateLog",
+          "query": "",
+          "scene": null
         }
       ]
     }

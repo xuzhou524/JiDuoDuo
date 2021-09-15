@@ -4,17 +4,18 @@
     "pages/user/user",
     "pages/add/add",
     "pages/editor/editor",
-    "pages/historyBill/historyBill"
+    "pages/historyBill/historyBill",
+    "pages/updateLog/updateLog"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#f4c903",
+    "navigationBarBackgroundColor": "#FECD2F",
     "navigationBarTitleText": "今日计件",
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "color": "#b6b6b6",
-    "selectedColor": "#f4c903",
+    "selectedColor": "#FECD2F",
     "list": [
       {
         "pagePath": "pages/index/index",

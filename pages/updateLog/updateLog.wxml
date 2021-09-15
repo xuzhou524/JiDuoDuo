@@ -1,0 +1,6 @@
+<view class="userItem" wx:for="{{updateLog}}" wx:key='index'>
+    <view class="item">
+      <text class="itemTitle" decode="{{true}}" space="{{true}}">{{item.version}}&nbsp;&nbsp;&nbsp;&nbsp;{{item.time}}</text>
+      <text class="itemNote">{{item.instruction}}</text>
+    </view>
+  </view>

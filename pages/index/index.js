@@ -178,7 +178,9 @@ Page({
       this.setData({
         userInfo: user
       })
-      this.getFlowProduction()
+      if (user.nickName.length > 0){
+        this.getFlowProduction()
+      }
     }
   },
 
@@ -188,10 +190,11 @@ Page({
     })
   },
 
-  onLoad: function (options) {
-    this.initializeData()
+  onLoad: function () {
+    // this.initializeData()
   },
   onShow: function () {
+    console.log("34343")
     this.initializeData()
   }
 })

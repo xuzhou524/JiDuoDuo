@@ -93,6 +93,12 @@ Page({
     }
   },
 
+  goUpdateLog() {
+    wx.navigateTo({
+      url: '/pages/updateLog/updateLog'
+    })
+  },
+
   onShow: function (options) {
     //取缓存的用户信息
     let user = wx.getStorageSync('user')
