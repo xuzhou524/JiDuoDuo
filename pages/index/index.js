@@ -91,9 +91,11 @@ Page({
     if (user == undefined) {
       this.login()
     } else {
-      wx.navigateTo({
-        url: '/pages/add/add',
-      })
+      if (user.nickName.length > 0){
+        wx.navigateTo({
+          url: '/pages/add/add',
+        })
+      }
     }
   },
 
