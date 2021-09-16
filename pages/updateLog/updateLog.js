@@ -3,6 +3,11 @@ Page({
   data: {
     updateLog:[
       {
+        version:'v1.0.5',
+        time:'2021年09月16日',
+        instruction:'修复已知问题'
+      },
+      {
         version:'v1.0.4',
         time:'2021年09月15日',
         instruction:'修复已知问题'
