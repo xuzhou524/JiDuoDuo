@@ -88,14 +88,12 @@ Page({
 
   addProduct(e) {
     let user = wx.getStorageSync('user')
-    if (user == undefined) {
+    if (user == undefined || user.nickName.length <= 0) {
       this.login()
     } else {
-      if (user.nickName.length > 0){
-        wx.navigateTo({
-          url: '/pages/add/add',
-        })
-      }
+      wx.navigateTo({
+        url: '/pages/add/add',
+      })
     }
   },
 
