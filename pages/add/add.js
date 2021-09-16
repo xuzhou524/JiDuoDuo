@@ -67,7 +67,10 @@ Page({
         unit: "分"
       }
     }).then(res => {
-      console.log("保存成功", res)
+      wx.showToast({
+        title: '保存成功',
+        icon: 'none'
+      })
       wx.navigateBack()
     })
   }

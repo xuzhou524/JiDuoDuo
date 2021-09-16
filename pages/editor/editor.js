@@ -2,7 +2,7 @@ var util = require('../../utils/util.js')
 Page({
 
   data: {
-    id:'',
+    id: '',
     productName: '',
     addTime: util.formatDate(new Date()),
     productCount: '',
@@ -11,13 +11,16 @@ Page({
     productTotalAmount: ''
   },
 
-  doDelete(){
+  doDelete() {
     const db_t_flowProduction = wx.cloud.database().collection('t_flowProduction')
     db_t_flowProduction
       .doc(this.data.id)
       .remove()
       .then(res => {
-        console.log("删除成功", res)
+        wx.showToast({
+          title: '删除成功',
+          icon: 'none'
+        })
         wx.navigateBack()
       })
   },
@@ -74,14 +77,17 @@ Page({
         }
       })
       .then(res => {
-        console.log("更新成功", res)
+        wx.showToast({
+          title: '更新成功',
+          icon: 'none'
+        })
         wx.navigateBack()
       })
   },
 
   onLoad: function (options) {
     this.setData({
-      id:options.product
+      id: options.product
     })
     const db_t_flowProduction = wx.cloud.database().collection('t_flowProduction')
     db_t_flowProduction

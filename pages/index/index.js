@@ -1,7 +1,7 @@
 // index.js
 Page({
   data: {
-    userInfo: '',
+    userInfo: null,
     openid: '',
     flowProduction: {
       totalAmount : 0,
@@ -86,9 +86,8 @@ Page({
     })
   },
 
-  addProduct(e) {
-    let user = wx.getStorageSync('user')
-    if (user == undefined || user.nickName.length <= 0) {
+  addProduct() {
+    if (this.data.userInfo == undefined) {
       this.login()
     } else {
       wx.navigateTo({
@@ -111,7 +110,10 @@ Page({
         this.getFlowProduction()
       },
       fail: (res) => {
-        console.log("授权失败", res)
+        wx.showToast({
+          title: '授权失败',
+          icon: 'none'
+        })
       }
     })
   },
@@ -168,19 +170,11 @@ Page({
   initializeData() {
     //取缓存的用户信息
     let user = wx.getStorageSync('user')
-    if (user == undefined) {
-      this.setData({
-        userInfo: '',
-        openid: '',
-        flowProduction: ''
-      })
-    } else {
-      this.setData({
-        userInfo: user
-      })
-      if (user.nickName.length > 0){
-        this.getFlowProduction()
-      }
+    this.setData({
+      userInfo: user
+    })
+    if (user != null){
+      this.getFlowProduction()
     }
   },
 
@@ -194,7 +188,6 @@ Page({
     // this.initializeData()
   },
   onShow: function () {
-    console.log("34343")
     this.initializeData()
   }
 })

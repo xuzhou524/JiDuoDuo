@@ -3,7 +3,7 @@
 Page({
 
   data: {
-    userInfo: '',
+    userInfo: null,
     openid: '',
     version: '1.0.0'
   },
@@ -20,14 +20,17 @@ Page({
         this.saveUserInfoToDb()
       },
       fail: (res) => {
-        console.log("授权失败", res)
+        wx.showToast({
+          title: '授权失败',
+          icon: 'none'
+        })
       }
     })
   },
 
   loginOut() {
     this.setData({
-      userInfo: ''
+      userInfo: null
     })
     wx.setStorageSync('user', null)
   },
@@ -104,7 +107,6 @@ Page({
     let user = wx.getStorageSync('user')
     //获取小程序信息
     let accountInfo = wx.getAccountInfoSync()
-    console.log("33",accountInfo.miniProgram.version)
     this.setData({
       userInfo: user,
       version: accountInfo.miniProgram.version ? accountInfo.miniProgram.version : '1.0.0'
@@ -112,15 +114,14 @@ Page({
   },
 
   onLoad: function (options) {
-    //取缓存的用户信息
-    let user = wx.getStorageSync('user')
-    console.log("33",user)
-    //获取小程序信息
-    let accountInfo = wx.getAccountInfoSync()
-    this.setData({
-      userInfo: user,
-      version: accountInfo.version ? accountInfo.version : '1.0.0'
-    })
+    // //取缓存的用户信息
+    // let user = wx.getStorageSync('user')
+    // //获取小程序信息
+    // let accountInfo = wx.getAccountInfoSync()
+    // this.setData({
+    //   userInfo: user,
+    //   version: accountInfo.miniProgram.version ? accountInfo.miniProgram.version : '1.0.0'
+    // })
   }
 
 })
